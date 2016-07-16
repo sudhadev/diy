@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /demo
+Disallow: /bin
+Disallow: /classes
+Disallow: /config
+Disallow: /console
+Disallow: /crons
+Disallow: /css
+Disallow: /errors
+Disallow: /js
+Disallow: /mail
+Disallow: /modules

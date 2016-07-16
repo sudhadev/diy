@@ -1,0 +1,143 @@
+/* CSS Document */
+/*img, div { behavior: url(iepngfix.htc) }*/
+
+/* START HOME PAGE*/
+
+#form_outer_text, #form_outer_text1, #home_form_outer {
+	margin-left:25px;
+	width:440px;
+	}
+#home_form_outer #catagory_type_outer #catagory_type_middle1{
+    width:300px;
+}
+
+
+#banner_heading {
+	margin:0px 0px 0px 10px;   
+}
+
+#middle_end_bar_middle #middle_end_banner1_mid{
+	margin:5px 0px 0px 5px;   
+}
+#middle_end_banner1{
+	margin-bottom: 10px;
+	}
+
+#middle_bar #middle_left_bar #middle_left_bar_middle {
+	margin-left:0px;
+	}
+#catagories-outer {
+	margin-left:10px;
+	}
+.page_braek{
+	margin:20px 10px;
+	font-size:0px;
+	}
+/* END HOME PAGE*/
+
+
+.nav-menu ul {
+	line-height:16px;
+	}	
+.contact_fieldBlock_left {
+	margin-left:10px;
+	padding-left:0px;
+	width:175px;
+	}
+#contact_us_form_middle {
+	padding:5px 0px;
+	}
+.contact_fieldBlock_right {
+	margin-left:0px;
+	}	
+#middle_end_banner_header, .add_classified_formtop {
+	font-size:0px;
+	}
+
+.catagories_item_browse, .catagories_name{
+	width:175px;
+	}
+
+#middle_end_banner2 {
+	padding-top:2px;
+	margin-bottom:0px;
+	}
+#middle_end_banner2_button  {
+	height:auto;
+	padding-top:94px;
+	}
+
+
+#main_form_bg {
+	padding-left:3px;
+	}
+	
+.catagories_item_yellow {
+	padding-bottom:9px;
+	}
+.catagories_item_white {
+	padding-bottom:8px;
+	}
+.left_supplier {
+	height:63px;
+	margin-top:2px;
+	}
+.cadds_search_descriptionrow {
+	padding:5px 0 5px 10px;
+	}
+.select_wishlist_button {
+	float:left;
+	}
+.no_data {
+	margin-left:10px;
+	margin-bottom:20px;
+	}
+.hourly_rate_main, .distance_main {
+	margin-left:2px;
+	padding-right:2px;
+	}
+.middle_center_bar_cells_foot {
+	margin-bottom:7px;
+	width:180px;
+	}
+tr.cadd_descriptionrow_gray {
+	background:#f6f6f6;
+}
+
+.text_fieldBlock_left {
+	margin-left:5px;
+	padding:10px 5px 0px 5px;
+	}
+.submit_butten {
+	margin-left:7px;
+	}
+.option_form_sub_selections {
+	margin-left:25px;
+	}
+
+.select_wishlist_button_left img {
+vertical-align:top;
+	}
+.nav-menu ul {
+	/*font-size:0px;*/
+	}
+		
+#footer {
+	margin-right:-3px;
+	margin-top:5px;
+	width:700px;
+	}
+/* Added by Sudharshan (21-2-2011)*/
+#tag_bg_middle{
+/*height:325px;*/
+}
+.msgBox{
+text-align:left;
+font-size:11px !important;
+}
+.msgBox img{
+align:absmiddle !important;
+width: 18px;
+height: 18px;
+}
+/* ############## */

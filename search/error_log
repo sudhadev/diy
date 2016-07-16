@@ -1,0 +1,17 @@
+[10-Jun-2012 18:52:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/diylive/public_html/search/index.php:44) in /home/diylive/public_html/classes/core/core.class.php on line 367
+[10-Jun-2012 18:52:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/diylive/public_html/search/index.php:44) in /home/diylive/public_html/classes/core/core.class.php on line 367
+[10-Jun-2012 18:52:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/diylive/public_html/search/index.php:44) in /home/diylive/public_html/classes/core/core.class.php on line 393
+[10-Jun-2012 18:52:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/diylive/public_html/search/index.php:44) in /home/diylive/public_html/classes/core/core.class.php on line 367
+[10-Jun-2012 18:52:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/diylive/public_html/search/index.php:44) in /home/diylive/public_html/classes/core/core.class.php on line 367
+[12-Jun-2012 07:36:09 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/diylive/public_html/classes/spell_corrector.class.php on line 96
+[12-Jun-2012 07:39:33 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/diylive/public_html/classes/spell_corrector.class.php on line 92
+[12-Jun-2012 08:04:07 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/diylive/public_html/classes/spell_corrector.class.php on line 113
+[12-Jun-2012 08:07:39 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/diylive/public_html/classes/spell_corrector.class.php on line 113
+[12-Jun-2012 08:09:05 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/diylive/public_html/classes/spell_corrector.class.php on line 88
+[12-Jun-2012 08:23:13 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/diylive/public_html/classes/spell_corrector.class.php on line 113
+[12-Jun-2012 08:32:44 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/diylive/public_html/classes/spell_corrector.class.php on line 113
+[12-Jun-2012 08:34:11 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/diylive/public_html/classes/spell_corrector.class.php on line 96
+[12-Jun-2012 08:35:25 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/diylive/public_html/classes/spell_corrector.class.php on line 88
+[19-Feb-2014 15:39:03 UTC] PHP Warning:  htmlentities() [<a href='function.htmlentities'>function.htmlentities</a>]: charset `130' not supported, assuming iso-8859-1 in /home/diylive/public_html/bin/tpl/service_list.tpl.php on line 184
+[19-Feb-2014 15:40:46 UTC] PHP Warning:  htmlentities() [<a href='function.htmlentities'>function.htmlentities</a>]: charset `130' not supported, assuming iso-8859-1 in /home/diylive/public_html/bin/tpl/service_list.tpl.php on line 184
+[19-Feb-2014 16:53:00 UTC] PHP Warning:  htmlentities() [<a href='function.htmlentities'>function.htmlentities</a>]: charset `130' not supported, assuming iso-8859-1 in /home/diylive/public_html/bin/tpl/service_list.tpl.php on line 184

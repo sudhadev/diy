@@ -1,0 +1,39 @@
+/* 
+    Document   : fix_ie9
+    Created on : Apr 10, 2012, 2:39:14 PM
+    Author     : sudharshan
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+#catagories-outer{
+    margin-left: 5px !important;
+}
+
+#middle_right_bar{
+    width: 695px !important;
+}
+
+#middle_center_bar{
+    padding-left: 12px !important;
+}
+
+#middle_end_banner2{
+    margin-top: 10px !important;
+}
+#footer{
+    width: 890px !important;
+}
+
+.search_tbl_space1{
+    height: 30px;
+}
+
+/*#tag_bg_middle{
+    height: 325px !important;
+}*/

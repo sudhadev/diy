@@ -1,0 +1,101 @@
+<?php
+  /*--------------------------------------------------------------------------\
+  '    This file is part of the module library of FUSIS                       '
+  '    (C) Copyright www.fusis.com                                            '
+  ' ..........................................................................'
+  '                                                                           '
+  '    AUTHOR          :  Priya Saliya Wijesinghe <saliyasoft@yahoo.com>      '
+  '    FILE            :  core.class.inc.php                                  '
+  '    PURPOSE         :  Root Class of the system hierarchy.                 '
+  '    					  :  Keep all the configuring data                       '
+  '    PRE CONDITION   :  commented                                           '
+  '    COMMENTS        :                                                      '
+  '--------------------------------------------------------------------------*/
+
+  Class Core{
+  
+  		//Public $_SYS;
+
+      function  __Construct()
+      {
+      
+       	/**
+			* Configure the folder paths for running enviorenments      	
+       	*/
+       		$devPath='/diy_v0.1';	// folder path of development server - from the root 
+       		$demoPath='';	// folder path of demonsration server - from the root 
+       		$livePath=''; 	// folder path of live server - from the root  
+       
+         	$HOST=$_SERVER['HTTP_HOST'];$IP_F=explode('.',$HOST);
+         	if($IP_F[0]=='127'||$IP_F[0]=='172'||$IP_F[0]=='localhost')
+         	{
+         		$HOST_SW_FOLDER=$this->HOST_SW_FOLDER=$devPath;$ENV='DEV'; 
+         	}
+         	elseif($HOST=='www.fusissoft.co.uk' || $HOST=='fusissoft.co.uk')
+         	{
+         		$HOST_SW_FOLDER=$this->HOST_SW_FOLDER=$demoPath;$ENV='DEMO';
+         	}
+         	else{
+         		$HOST_SW_FOLDER=$this->HOST_SW_FOLDER=$livePath;$ENV='live';
+         	} 
+        	
+                    
+       	/**
+			* Include necessory configuration files      	
+       	*/       
+       	 	require($_SERVER['DOCUMENT_ROOT'].$this->HOST_SW_FOLDER.'/config/config.php');
+          	require($_SERVER['DOCUMENT_ROOT'].$this->HOST_SW_FOLDER.'/'.$PREFIX_DIR.'config/'.$PREFIX_FILE.'links.config.php');
+          	require($_SERVER['DOCUMENT_ROOT'].$this->HOST_SW_FOLDER.'/'.$PREFIX_DIR.'config/'.$PREFIX_FILE.'db_vals.config.php');
+          	require($_SERVER['DOCUMENT_ROOT'].$this->HOST_SW_FOLDER.'/'.$PREFIX_DIR.'config/'.$PREFIX_FILE.'msgs.config.php');
+          	require($_SERVER['DOCUMENT_ROOT'].$this->HOST_SW_FOLDER.'/'.$PREFIX_DIR.'config/'.$PREFIX_FILE.'geo.config.php');
+
+                    
+       	/**
+			* Load All fields to class variables     	
+       	*/       
+				$this->_SYS['CONF']=$_CONF; 		// Configurations
+				$this->_SYS['PATH']=$_PATHS;	// Links
+				$this->_SYS['DB']=$_DB;			// Databases
+				$this->_SYS['MSGS']=$_MSGS;	// Messages
+				$this->_SYS['GEO']=$_GC;	// Messages
+	
+				require_once($this->_SYS['PATH']['LOGIN_CONF']);//print_r($_LCONF);//echo $this->_SYS['PATH']['LOGIN_CONF'];
+				$this->_SYS['LCONF']=$_LCONF;
+
+
+      }// End Construct
+      
+      public function auth($use=1,$auth=false){
+      	$incWithinCore=true;
+         require_once($this->_SYS['PATH']['SESS']);
+    		$objSession = new Session;
+    		$objSession->config=$this->_SYS['LCONF'];
+			$arrAuth=$objSession->read($use,$this->_SYS['LCONF']['LOGIN'][$use]['COOKIE_NAME'],$auth);
+			
+     	
+	      	$this->sessUId=$arrAuth['user'];
+	      	$this->sessUType=$arrAuth['uType'];
+	      	$this->sessURole['role'];
+	      	$this->sessKey=$arrAuth['sKey'];
+	      	$this->sessTmpKey=$arrAuth['tKey'];
+	      	$this->sessIp=$arrAuth['ip'];
+	      	$this->sessAccess=$arrAuth['access']; 
+	      	$this->sessExpire=$arrAuth['expire'];
+	      	$this->sessData=$arrAuth['eFields'];
+	      	
+	      	if($use==1)
+	      	{
+	      		require_once($this->_SYS['PATH']['CLASS_CUSTOMER']);
+	      		$objCustomer = new Customer;$objCustomer->dev=true;
+	      		$cusData=$objCustomer->getStatus($this->sessData[2]);
+	      		$this->sessUStatus=$cusData[0][0];
+	      		$this->sessUType=$cusData[0][1];
+	      		$this->sessUSubsTypes=array($cusData[0][2],$cusData[1][2],$cusData[1][2]);
+	      		$this->sessUPkgType=array($cusData[0][3],$cusData[1][3],$cusData[1][3]);
+	      		$this->sessSubsStatus=array($cusData[0][4],$cusData[1][4],$cusData[1][4]);
+	      	
+	      	}
+ 
+      }
+ } // End Class
+?>

@@ -1,0 +1,115 @@
+//-----------------------------------------------------------------
+//  Written by Saliya Wijesinghe @FUSIS IT
+//  Email: saliyasoft@gmail.com
+//  Phone: +94773505072
+//-----------------------------------------------------------------
+   function zoom(preURL,img,com)
+   {
+               args="width="+100+",height="+100+",resizable=no,scrollbars=no,status=0";
+               myUrl=preURL + "/modules/misc/zoom_prods.php?img=" + img + "&com=" + com;
+               window.open(myUrl,"Zoom",args);
+   }
+   
+   function print_pg(URL)
+   {
+               args="width="+700+",height="+400+",resizable=no,scrollbars=no,status=0";
+               window.open(URL,"Print",args);
+   }
+   function  pop_help()
+   {
+               args="width="+750+",height="+495+",resizable=no,scrollbars=no,status=0";
+               window.open("../help/" ,"Help",args);
+   }
+
+
+ 
+
+   function conf(com,act)
+   {
+
+        /*switch (com){
+                 //  case "0007":  var valid=validate_com_0007(act);  break;
+        } */
+           valid='yes';
+
+           if(valid=='yes')
+           {
+             switch (act){
+                     case 'edit':document.frmSetupCart.submit();break;
+
+             }
+
+           }
+           else if(valid)
+           {
+                   alert(valid);
+           }
+
+   }
+
+
+   function del(id,msg,parent){
+          if(confirm(msg)){
+              document.location.href="?f=&action=del&id="+id+"&parent="+parent;
+          }
+   }
+
+
+  function call_url(url){
+		document.location.href=url;
+  }  
+  
+   
+     
+function logout(msg,url){
+	  
+	    if(confirm(msg)){
+             // document.frmLg.submit();
+			 document.location.href=url;
+          }
+}
+  
+function cancel(){
+	history.back();
+
+}
+
+
+
+/*AJAX INCLUTION
+written by Saliya Wijesinghe <saliyasoft@yahoo.com>
+*/
+
+var request = null;
+
+function create_request(){
+		try {
+			 request= new XMLHttpRequest();
+		} catch (microsoft){
+			try {
+				request= new ActiveXObject("Msx12.XMLHTTP");
+			} catch (othermicrosoft){
+				try {
+					request= new ActiveXObject("Microsoft.XMLHTTP");
+				}catch (fail){
+					request =null;
+				}
+			}
+		}
+		
+		if(request==null){
+				alert ("Error Creating Reqest Object");
+		}
+}
+
+
+function printURL(url){
+	create_request();
+	request.open("GET", url, true);
+	//request.onreadystatechange=updateLPane;
+	request.send(null);
+}
+
+
+
+

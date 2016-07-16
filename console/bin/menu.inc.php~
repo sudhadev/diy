@@ -1,0 +1,26 @@
+<ul id="menu">
+	
+	<li class="node"><a>User Management</a>
+		<ul style="width: 145px;">
+		<li style="width: 145px;"><a href="<?php echo $objCore->_SYS['CONF']['URL_CONSOLE'];?>/users/?f=add">Add New User</a></li>
+		<li style="width: 145px;"><a  href="<?php echo $objCore->_SYS['CONF']['URL_CONSOLE'];?>/users/?">User List</a></li>
+		<li style="width: 145px;" class="separator"><span></span></li>
+		<li style="width: 145px;"><a  href="<?php echo $objCore->_SYS['CONF']['URL_CONSOLE'];?>/users/?f=change">Change My Password</a></li>
+		</ul>
+	</li>
+	
+	<li class="node"><a>CMS</a>
+		<ul style="width: 140px;">
+		<li style="width: 140px;"><a  href="<?php echo $objCore->_SYS['CONF']['URL_CONSOLE'];?>/cms/?f=edit&pid=13">About Us</a></li>
+		<li style="width: 140px;"><a  href="<?php echo $objCore->_SYS['CONF']['URL_CONSOLE'];?>/cms/?f=edit&pid=16">Privacy Policy</a></li>
+		</ul>
+	</li>
+	
+	<li class="node"><a>Help</a>
+		<ul style="width: 110px;">
+		<li style="width: 110px;"><a class="icon-16-help" href="#">Index</a></li>
+		<li style="width: 110px;"><a class="icon-16-help" href="#">About</a></li>
+		</ul>
+	</li>
+</ul>
+<br/><br/>

@@ -1,0 +1,446 @@
+/* 
+    Document   : subscription
+    Created on : May 17, 2010, 12:39:23 PM
+    Author     : Thiwanka /saliya
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+#suppliers_container {
+	width:603px;
+	height:100%;
+	float:left;
+	display:inline;
+}
+/*this is for Supplies enable ---starts---------------*/
+
+.subs_suppEnable td.heading_glod {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/gold_bg.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_suppEnable td.heading_silver {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/silver_bg.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_suppEnable td.heading_bronze {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/bronze_bg.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_suppEnable td.heading_glod_bot {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/gold_bg_bot.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_suppEnable td.heading_silver_bot {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/silver_bg.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_suppEnable td.heading_bronze_bot {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/bronze_bg_bot.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_suppEnable .gold_light {
+	height:25px;
+	background:#fff0d1;
+}
+
+.subs_suppEnable .gold_dark {
+	height:25px;
+	background:#ffd680;
+}
+
+.subs_suppEnable .silver_light {
+	height:25px;
+	background:#ebe8e8;
+}
+
+.subs_suppEnable .silver_dark {
+	height:25px;
+	background:#cdcbcb;
+}
+
+.subs_suppEnable .bronze_light {
+	height:25px;
+	background:#f6d6af;
+}
+
+.subs_suppEnable .bronze_dark {
+	height:25px;
+	background:#edbe85;
+}
+
+
+/*this is for enable ---ends---------------*/
+
+/*this is for disable ---starts---------------*/
+
+.subs_suppDisable td.heading_glod {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/gold_bg_dis.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_suppDisable td.heading_silver {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/silver_bg_dis.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_suppDisable td.heading_bronze {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/bronze_bg_dis.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_suppDisable td.heading_glod_bot {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/gold_bg_bot_dis.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_suppDisable td.heading_silver_bot {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/silver_bg_dis.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_suppDisable td.heading_bronze_bot {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/bronze_bg_bot_dis.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_suppDisable .gold_light {
+	height:25px;
+	background:#fdf7e9;
+	color:#cccccc;
+}
+
+.subs_suppDisable .gold_dark {
+	height:25px;
+	background:#fbe8c1;
+	color:#cccccc;
+}
+
+.subs_suppDisable .silver_light {
+	height:25px;
+	background:#f3f1f1;
+	color:#cccccc;
+}
+
+.subs_suppDisable .silver_dark {
+	height:25px;
+	background:#e6e6e6;
+	color:#cccccc;
+}
+
+.subs_suppDisable .bronze_light {
+	height:25px;
+	background:#fff0de;
+	color:#cccccc;
+}
+
+.subs_suppDisable .bronze_dark {
+	height:25px;
+	background:#ffe7ca;
+	color:#cccccc;
+}
+
+.subs_suppDisable .services_dark {
+	height:25px;
+	background:#fdfabe;
+}
+
+/*this is for Services Enable ---starts---------------*/
+
+.subs_servEnable td.heading_services {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/service_bg.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_servEnable td.heading_services_bot {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/service_bg_bot.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_servEnable .services_light {
+	height:25px;
+	background:#fffdce;
+}
+
+.subs_servEnable .services_dark {
+	height:25px;
+	background:#fbf8b4;
+}
+
+/*this is for Services Enable ---ends---------------*/
+
+/*this is for Services Disable ---starts---------------*/
+
+.subs_servEnable td.heading_services {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/service_bg.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_servEnable td.heading_services_bot {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/service_bg_bot.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_servEnable .services_light {
+	height:25px;
+	background:#fffdce;
+}
+
+.subs_servEnable .services_dark {
+	height:25px;
+	background:#fbf8b4;
+}
+
+/*this is for Services Disable ---ends---------------*/
+
+/*this is for Services Disable ---starts---------------*/
+
+.subs_servDisable td.heading_services {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/service_bg_dis.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_servDisable td.heading_services_bot {
+	width:200px;
+	height:30px;
+	background:url(../images/subscription/service_bg_bot_dis.gif) no-repeat;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:0px;
+}
+
+.subs_servDisable .services_light {
+	height:25px;
+	background:#fffde5;
+	color:#cccccc;
+}
+
+.subs_servDisable .services_dark {
+	height:25px;
+	background:#fefbd5;
+	color:#cccccc;
+}
+
+.option_form_sub_selections {
+border:none;
+
+}
+
+.subs_suppEnable input[name="bronze"], .subs_suppEnable input[name="silver"], .subs_suppEnable input[name="gold"],input[name="cadd"] {
+	background:url(../images/btn_subscribe.png) no-repeat;
+	border:none;
+	width:81px;
+	height:25px;
+	margin-top:0;
+	cursor:pointer;
+}
+
+.subs_suppDisable input[name="bronze"], .subs_suppDisable input[name="silver"], .subs_suppDisable input[name="gold"] {
+	background:url(../images/btn_subscribe_dis.png) no-repeat;
+	border:none;
+	width:81px;
+	height:25px;
+	margin-top:0;
+}
+
+
+.subs_servEnable input[name="gold"] {
+	background:url(../images/btn_subscribe.png) no-repeat;
+	border:none;
+	width:81px;
+	height:25px;
+	margin-top:0;
+	cursor:pointer;
+}
+
+.subs_servDisable input[name="gold"] {
+	background:url(../images/btn_subscribe_dis.png) no-repeat;
+	border:none;
+	width:81px;
+	height:25px;
+	margin-top:0;
+}
+
+#prBox.active{
+    width: 575px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #ffe;
+    border: 1px solid #eee;
+    padding: 10px ;
+}
+
+#prBox.inactive{
+    width: 575px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #eee;
+    border: 1px solid #eee;
+    padding: 10px ;
+    color: #ccc;
+}
+
+#prBox .text{
+    font-size: 10px;
+    color: #666;
+}
+#prBox.inactive .text{
+    font-size: 10px;
+    color: #ccc;
+}
+
+#prBox .textMain{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#prBox input{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}   
+
+#prBox #msg{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #f00;
+    font-weight: bold;
+}
+
+#clistplan.active
+{
+    color: #000;
+}
+
+#clistplan.inactive
+{
+    color: #eee;
+}
+

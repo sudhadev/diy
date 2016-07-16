@@ -1,0 +1,80 @@
+<?php 
+  /*--------------------------------------------------------------------------\
+  '    This file is part  module library of FUSIS                             '
+  '    (C) Copyright 2002-2009 www.fusis.com                                  '
+  ' ..........................................................................'
+  '                                                                           '
+  '    AUTHOR          :  Priya Saliya Wijesinghe <saliyasoft@yahoo.com>      '
+  '    FILE            :  login.tpl.php                                       '
+  '    PURPOSE         :  login interface for the users							   '
+  '    PRE CONDITION   :  commented                                           '
+  '    COMMENTS        :                                                      '
+  '--------------------------------------------------------------------------*/
+   
+?>
+
+<div id="right_bar_middle">
+  <div id="main_form_bg">
+    <div id="main_form_bg_middle">
+      <div id="main_form_bg_topbar"><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/main_form_bg_top.jpg" /></div>
+      <div id="main_form_bg_middlebar">
+        <div id="loging_banner">SUPPLIER LOG IN</div><?php
+							if($_REQUEST['err'])
+							{
+								require_once($objCore->_SYS['PATH']['MSG_CONSOLE']);
+							}             	
+               	?> 
+        <div id="form_bg">               	
+          <form action="<?php echo $objCore->_SYS['CONF']['URL_LOGIN_MODULE'];?>/process.php" method="get">
+            <div id="form_outer">
+              <div id="form_middle">
+                <div id="form_cell_outer">
+                  <div id="form_cell_left"> Username: </div>
+                  <div id="form_cell_right">
+                    <label>
+                    <div align="left">
+                      <input name="uid" type="text" id="uid" size="30" />
+                    </div>
+                    </label>
+                  </div>
+                </div>
+                <div id="form_cell_outer">
+                  <div id="form_cell_left"> Password: </div>
+                  <div id="form_cell_right">
+                    <label>
+                    <div align="left">
+                      <input name="pass" type="password" id="pass" size="30" />
+                    </div>
+                    </label>
+                  </div>
+                </div>
+                <div id="form_cell_outer">
+                  <div id="form_cell_left"></div>
+                  <div id="form_cell_right">
+                    <div id="form_cell_rightL">
+                      <label>
+                      <div align="left"><input type="image" src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/submit.jpg" width="81" height="25" border="0"/></a></div>
+                      </label>
+                    </div>
+                    <div id="form_cell_rightR">Forgotten your log in details? <a href="javascript:requestForgotPassword('forgotpassword.ajax.php')">Click here ></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="outer">
+          <div id="outer_middle">
+            <div id="banner" align="center">REGISTRATION</div>
+             <div id="text_area" class="common_text"> If you would like to create listings on <strong>DIY PRICE CHECK </strong>you need to create an User Account first.<br />
+              Registration is easy and only takes a few minutes.<br />
+              <br />
+            </div>
+            <div id="signup_butten"><a href="#"><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/supplier_signup.jpg" border="" /></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="main_form_bg_bottombar"><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/main_form_bg_bottom.jpg" /></div>
+    </div>
+  </div>
+</div>

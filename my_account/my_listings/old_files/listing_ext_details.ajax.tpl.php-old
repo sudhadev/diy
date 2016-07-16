@@ -1,0 +1,137 @@
+<?php
+/*--------------------------------------------------------------------------\
+  '    This file is part  module library of FUSIS                             '
+  '    (C) Copyright 2002-2009 www.fusis.com                                  '
+  ' ..........................................................................'
+  '                                                                           '
+  '    AUTHOR          :  Priya Saliya Wijesinghe <saliyasoft@yahoo.com>      '
+  '    FILE            :  listing_ext_detail.ajax.tpl.php                                           '
+  '    PURPOSE         :  provide the template for listing extra information     '
+  '    PRE CONDITION   :  commented                                           '
+  '    COMMENTS        :                                                      '
+  '--------------------------------------------------------------------------*/
+
+require_once("../../classes/core/core.class.php");
+$objCore=new Core;
+
+/**
+ * Display the logged user.
+ */
+$objCore->auth(1,true);
+
+require_once($objCore->_SYS['PATH']['CLASS_LISTING']);
+if(!is_object($objListing)) {
+    $objListing = new Listing;
+}
+
+
+
+$listing=$objListing->dList("WHERE id='".$_POST['id']."'");
+
+
+?>
+<div class="contact_fieldBlock_right" style="margin-top: -35px;">
+    
+
+    <div class="image_path">
+        <!--
+           Image is uploaded and display in this div.
+        -->
+        <div id="uploadingImg">
+           <?php  $imgUrl = $objListing->image($listing[0][14],$objCore->_SYS['CONF']['FTP_LISTINGS'],$objCore->_SYS['CONF']['URL_IMAGES_LISTINGS'],$listing[0][5]);?>
+           <img width="65" border="0" src="<?php echo $imgUrl;?>">
+           <br/>
+           <a href="javascript: zoom('<?php echo $objCore->_SYS['CONF']['URL_IMG_UPLOAD_MODULE'];?>/zoom_prods.php','<?php echo $listing[0][14]."_spl_".$listing[0][5]; ?>','listing');"><img  border="0" src="<?php echo $objCore->_SYS['CONF']['URL_ICONS_FRONT'];?>/zoom.png" /></a>
+
+        </div>
+        <!--
+           Display zoom icon in here.
+        -->
+        <div id="zooming" style="display:none">
+            <a href="javascript:doZoom('<?php echo $objCore->_SYS['CONF']['URL_IMG_UPLOAD_MODULE'];?>/zoom_prods.php','listings');"><img border="0" src="<?php echo $objCore->_SYS['CONF']['URL_ICONS_FRONT'];?>/zoom.png" /></a>
+        </div>
+    </div>
+
+
+    <!--
+       Use this form to display file browse part.
+    -->
+    <div class="" style="width:500px;">
+        <form id="frmListingED" name="frmListingED" action="" style="vertical-align:top">
+            <div class="contact_fieldBlock_left" style="margin-top:10px;">Image: <span class="required_fields"></span></div>
+            <div class="contact_fieldBlock_right">
+
+             <!--
+              Display loading image.
+            -->
+            <div id="message_holder">
+                <div id="error_msg" style="margin-left: -8px; width: 630px;">
+                    <?php
+                    /*
+                     * classified ads messages has been used here because
+                     * those are identically similar on image uploading as @ 2010-June
+                     * if the requirenments get changed in the future, pls add relavant
+                     * configurations in message.config.php
+                     */
+                    if($msg) {
+                        echo $objCore->msgBox("CLASSIFIED_ADS",$msg,'400px');
+                    } elseif($_REQUEST['msg1'] != "" && $_REQUEST['msg2'] != "") {
+                        $msg = array($_REQUEST['msg1'],$_REQUEST['msg2']);
+                        echo $objCore->msgBox("CLASSIFIED_ADS",$msg,'400px');
+                    }
+                    ?>
+                </div>
+                <table width="80%" border="0" align="center">
+                    <tr>
+                        <td class="" style="padding-top:10px; margin-left: -100px;"><div id="divProcess">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uploading Image...</div></td>
+                    </tr>
+
+                </table>
+            </div>
+
+                <label>
+                    <input type="hidden" name="maxSize" value="9999999999" />
+                    <input type="hidden" name="maxW" value="200" />
+                    <input type="hidden" name="fullPath" value="<?php echo $objCore->_SYS['CONF']['URL_IMG_UPLOAD_MODULE'];?>" />
+                    <input type="hidden" name="relPath" value="<?php echo $objCore->_SYS['CONF']['URL_IMG_UPLOAD_MODULE'];?>" />
+                    <input type="hidden" name="colorR" value="255" />
+                    <input type="hidden" name="colorG" value="255" />
+                    <input type="hidden" name="colorB" value="255" />
+                    <input type="hidden" name="maxH" value="300" />
+                    <input type="hidden" name="filename" value="filename" />
+                    <input type="hidden" name="imgFolder" value="listings" id="imgFolder"/>
+                    <input type="hidden" name="logUser" value="<?php echo $objCore->sessCusId;?>" id="logUser"/>
+
+                    <input type="file" class="add_cladds_txtfield" name="filename" onchange="clearMsg('error_msg');getFieldNames('keyName','extDat','zooming'); ajaxUpload(this.form,'<?php echo $objCore->_SYS['CONF']['URL_IMG_UPLOAD_MODULE'];?>/ajaxupload.php','uploadingImg','divProcess');  this.value='';return true;" />
+                    <div class="common_text" style="font-size:10px;"> <br/> <?php  echo str_replace("{%MAX_SIZE%}",$objCore->_SYS['CONF']['F_SIZE_PRINT']['IMAGE'],$objCore->_SYS['MSGS']['COMMON']['IMAGE_PRE_UPLOAD']);?></div>
+
+
+                </label>
+            </div>
+            <div class="contact_fieldBlock_left">Description: <span class="required_fields"></span></div>
+            <div class="contact_fieldBlock_right">
+                 
+                <textarea id="listED" style="width:250px;height: 100px;"><?php echo $listing[0][15];?></textarea>
+                <div class="common_text" style="font-size:10px;">* Keep your description in less than 255 Characters  </div>
+            </div>
+            <div class="contact_fieldBlock_left"></div>
+            <div class="contact_fieldBlock_right">
+                <a href="javascript: cancelExtraDetails();"><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/cancel.jpg" border="" ></a>
+                <label id="submit_contact_details">
+
+                    <a href="javascript:commitExtraDetails('<?php echo $_POST['control'];?>');"><img alt="Submit" border="0" src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/submit.jpg"/></a>
+                </label>
+            </div>
+
+
+            <?php
+//        $where = " WHERE `customer_id`='".$objCore->sessCusId."'";
+//        $cus_list = $objCustomer->dList($where);
+//        $cus_tbl_id = $cus_list[0][6];
+            ?>
+
+        </form>
+        <form id="extDat" name="extDat" action="">  <input type="hidden" name="keyName" value="<?php echo $listing[0][14];?>" id="keyName"/>
+        <input type="hidden" name="imagePath" value="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_LISTINGS']."/".$objCore->sessCusId."/thumbs/";?>" id="imagePath"/></form>
+    </div>
+</div>

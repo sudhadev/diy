@@ -1,0 +1,121 @@
+<?php 
+  /*--------------------------------------------------------------------------\
+  '    This file is part  module library of FUSIS                             '
+  '    (C) Copyright 2002-2009 www.fusis.com                                  '
+  ' ..........................................................................'
+  '                                                                           '
+  '    AUTHOR          :  Priya Saliya Wijesinghe <saliyasoft@yahoo.com>      '
+  '    FILE            :  head.inc.php                                        '
+  '    PURPOSE         :  header file                                         '
+  '    PRE CONDITION   :  commented                                           '
+  '    COMMENTS        :                                                      '
+  '--------------------------------------------------------------------------*/
+  
+  //$objCore->auth(1);
+  //set the style for top bar
+  $objCore->sessUId==""? $topBarStyle="Yellow":$topBarStyle="Black"; 
+  
+?>
+
+
+<div id="top_bar" class="bg<?php echo $topBarStyle;?>">
+
+<div id="top_bar_left">
+<a href="<?php echo $objCore->_SYS['CONF']['URL_SYSTEM'];?>"><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/diy-logo.png" alt="logo" id="logoimg" border="0"/></a>
+</div>
+    <div id="tl_text" <?php if($objCore->sessUId) echo ' style="color: #FFF;"';?>>Beta <span style="color: red;">*</span></div>
+<div id="top_bar_right">
+<div id="top_bar_links">
+<div class="mainDiv">          
+					<?php 
+				if($objCore->sessUId){
+                                /*
+                                 * Create wish list object if already not created
+                                 */
+                                require_once($objCore->_SYS['PATH']['CLASS_WISH_LIST']);
+                                if(!is_object($objWishList))
+                                {
+                                    $objWishList = new WishList($objCore->gConf);
+                                }
+
+					?>
+    <?php
+        
+	if(!is_object($objCustomer))
+	{
+            require_once($objCore->_SYS['PATH']['CLASS_CUSTOMER']);
+		$objCustomer= new Customer;
+	}
+        $cusData_forHeader = $objCustomer->getCustomerData($objCore->sessCusId);
+        
+    ?>
+          			<span class="title">MY ACCOUNT 
+                                    <a href="<?php echo $objCore->_SYS['CONF']['URL_MY_ACCOUNT'];?>">
+                                        <span id="header_user_name">
+                                            <?php 
+                                                if($cusData_forHeader[0][2]){
+                                                    echo $cusData_forHeader[0][2]; 
+                                                }else{?>
+                                                    <span id="header_user_name"><?php echo $objCore->sessData[0]." ".$objCore->sessData[1];?></span>   
+                                            <?php  }
+                                            ?>
+                                        </span>
+                                    </a>
+                                </span>
+                               <!-- <div id="header_wishlist_count">-->
+                                <span class="title" >wish list
+                                    <a href="<?php echo $objCore->_SYS['CONF']['URL_WISH_LIST'];?>">
+                                        <span id="header_wishlist_count">
+                                            <?php echo $objWishList->itemCount();?>
+                                        </span> Items
+                                    </a>
+                                </span>
+                                <!--</div>    -->
+						<span class="title">					
+							<a href="<?php echo $objCore->_SYS['CONF']['URL_LOGIN_MODULE'];?>/process.php?logout=y">LOG OUT</a>
+						</span>
+					<?php 
+						}
+						else
+						{
+					?>	 <span class="title">	
+							<a href="<?php echo $objCore->_SYS['CONF']['URL_LOGIN_FRONT'];?>/?f=signup" class="Yellow">Sign up</a>
+						</span>
+						<span class="title">		
+							<a href="<?php echo $objCore->_SYS['CONF']['URL_LOGIN_FRONT'];?>/" class="Yellow">LOG IN</a>
+						</span>
+						 
+					<?php 
+						}
+					
+					?>
+	</div>		
+</div>
+<a href="<?php echo $objCore->_SYS['CONF']['URL_SYSTEM'];?>" class="cursorHand"><div id="top_bar_banner" class="img<?php echo $topBarStyle;?>"></div></a>
+<div id="top_bar_menu">
+<div class="topbar_nav"><a href="<?php echo $objCore->_SYS['CONF']['URL_SYSTEM'];?>" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/home-rollover.jpg',1)"><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/home<?php if($homePage){ echo "-rollover";}?>.jpg" name="Image8" border="0" id="Image8" /></a></div>
+<div class="topbar_nav"><a href="<?php echo $objCore->_SYS['CONF']['URL_SYSTEM'];?>/browse/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image9','','<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/browse-rollover.jpg',1)"><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/browse-<?php if($objCore->curSection()=="browse"){ echo "rollover";}else{echo "all";}?>.jpg" name="Image9" border="0" id="Image9" /></a></div>
+<div class="topbar_nav"><a href="<?php echo $objCore->_SYS['CONF']['URL_SYSTEM'];?>/green_ideas.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image10','','<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/green-idea-rollover.jpg',1)"><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/green-idea-<?php if($objCore->curPage()=="green_ideas.php") echo "rollover";?>.jpg" name="Image10" border="0" id="Image10" /></a></div>
+<div class="topbar_nav"><a href="<?php echo $objCore->_SYS['CONF']['URL_SYSTEM'];?>/about_us.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image11','','<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/about-us-rollover.jpg',1)"><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/about-us<?php if($objCore->curPage()=="about_us.php") echo "-rollover";?>.jpg" name="Image11"  border="0" id="Image11" /></a></div>
+<div class="topbar_nav"><a href="<?php echo $objCore->_SYS['CONF']['URL_SYSTEM'];?>/contact_us.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image12','','<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/contact-us-rollover.jpg',1)"><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/contact-us<?php if($objCore->curPage()=="contact_us.php") echo "-rollover";?>.jpg" name="Image12" border="0" id="Image12" /></a></div>
+<?php
+    if($objCore->sessCusId){
+        if($objCore->sessUType=="B")
+        { 
+            $menuImage="buyer"; // if need to change this buyer, replace the 'user' with 'buyer'
+        }
+        else
+        {
+            $menuImage="supplier";// if need to change this supplier, replace the 'user' with 'supplier'
+        }
+    }
+    else
+    {
+        $menuImage="user";
+    }
+ ?>
+
+<div class="topbar_nav"><a href="<?php echo $objCore->_SYS['CONF']['URL_SYSTEM'];?>/my_account/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image13','','<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/<?php echo $menuImage;?>-area-rollover.jpg',1)"><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_FRONT'];?>/<?php echo $menuImage;?>-area<?php if((false !== strpos($objCore->curPageURL(), "/my_account/"))) echo "-rollover";?>.jpg" name="Image13" border="0" id="Image13" /></a></div>
+</div>
+</div>
+</div>

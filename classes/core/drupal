@@ -1,0 +1,40 @@
+#NameVirtualHost 87.106.131.119:80
+<VirtualHost 87.106.131.119:80>
+	ServerAdmin webmaster@localhost
+	ServerName  fusis.com
+	ServerAlias www.fusis.com
+	DocumentRoot /var/www/drupal
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /var/www/drupal>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+		# This directive allows us to have apache2's default start page
+                # in /apache2-default/, but still have / go to the right place
+	</Directory>
+
+	ErrorLog /var/log/apache2/error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog /var/log/apache2/access.log combined
+	ServerSignature On
+
+	# Custom Aliases
+	Alias /fileshare "/var/www/fileshare"
+	<Directory /var/www/fileshare>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+		# This directive allows us to have apache2's default start page
+                # in /apache2-default/, but still have / go to the right place
+	</Directory>
+
+</VirtualHost>

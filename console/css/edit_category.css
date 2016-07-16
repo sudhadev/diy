@@ -1,0 +1,23 @@
+/* 
+    Document   : edit_category.css
+    Created on : Mar 9, 2011, 5:50:01 PM
+    Author     : sudharshan
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+#page_body{
+    width: 70%;
+}
+
+div.msgBox{
+width: 90%;
+}
+#divMessage{
+padding-left: 300px;
+}

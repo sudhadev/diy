@@ -1,0 +1,266 @@
+/* CSS Document */
+html {
+	overflow-y:auto;
+	overflow-x:hidden;
+	}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	overflow:auto;
+}
+#top_bar .bgBlack {
+	background-image:url(../images/black-top.jpg);
+	}
+#top_bar .bgYellow {
+ 	background-image:url(../images/yellow-top.jpg);
+	}
+.imgYellow{
+	background-image:url(../images/yellow-banner.jpg);
+	}
+
+.imgBlack{
+	background-image:url(../images/black-banner.jpg);
+	}
+#top_bar_menu {
+	margin-left:35px;
+	}
+
+/* START HOME PAGE*/
+
+#form_outer_text, #form_outer_text1, #home_form_outer {
+	margin-left:12px;
+	width:445px;
+	}
+#home_form_outer #catagory_type_outer #catagory_type_middle1{
+    width:300px;
+}
+.text_fieldBlock_right {
+	margin-left:0px;
+	}
+#middle_end_bar {
+	padding-left:12px;
+	}
+
+#banner_heading, #text_area {
+	margin:0px 0px 0px 10px;   
+}
+
+#middle_end_bar_middle #middle_end_banner1_mid{
+	margin:5px 0px 0px 5px;   
+}
+#middle_end_banner1{
+	margin-bottom: 10px;
+	}
+
+#middle_bar #middle_left_bar #middle_left_bar_middle {
+	margin-left:0px;
+	}
+#catagories-outer {
+	margin-left:5px;
+	}
+#banner{
+	width:450px;
+	margin-left:10px;
+	}
+#tag_bg_middle{
+/* min-height hack for ie6 */
+      min-height: 325px;
+      height: auto !important;
+      height: 325px;
+}
+.page_braek{
+	margin:20px 10px;
+	font-size:0px;
+	}
+/* END HOME PAGE*/
+
+#middle_center_bar {
+	padding-left:6px;
+	margin-left:6px;
+	}
+	
+.middle_center_bar_cells {
+	margin-left:10px;
+	}
+.contact_fieldBlock_left {
+	margin-left:10px;
+	padding-left:0px;
+	width:175px;
+	}
+#contact_us_form_middle {
+	padding:5px 0px;
+	}
+.contact_fieldBlock_right {
+	margin-left:0px;
+	}	
+#middle_end_banner_header, .add_classified_formtop {
+	font-size:0px;
+	}
+
+.catagories_item_browse, .catagories_name{
+	width:174px;
+	}
+#middle_end_banner_bottom {
+	padding-bottom:0px;
+	}
+#middle_end_banner2 {
+	padding-top:2px;
+	margin-bottom:0px;
+	}
+#middle_end_banner2_button  {
+	height:auto;
+	padding-top:94px;
+	}
+.breadcrumb {
+	margin-left:9px;
+	}
+
+.search_description, .list, .classified_search_list {
+	margin-left:8px;
+	}
+#main_form_bg_topbar{
+	font-size:0px;
+	}
+#main_form_bg {
+	padding-left:3px;
+	}
+	
+#clear_selections {
+	margin-left:175px;
+	margin-top:4px;
+	}
+#add_selections{
+	margin-top:4px;
+	}
+#average-price-bg {
+	padding-top:2px;
+	}
+.catagories_item_yellow {
+	padding-bottom:9px;
+	}
+.catagories_item_white {
+	padding-top:0px;
+	}
+.catagories_item_ddwhite{
+	padding-top:5px;
+	}
+.cadds_search_descriptionrow {
+	padding:10px 0 5px 10px;
+	}
+.select_wishlist_button {
+	float:left;
+	}
+.no_data {
+	margin-left:10px;
+	margin-bottom:20px;
+	}
+.hourly_rate_main, .distance_main {
+	margin-left:2px;
+	padding-right:2px;
+	}
+.middle_center_bar_cells_foot {
+	margin-bottom:7px;
+	width:180px;
+	}
+tr.cadd_descriptionrow_gray {
+	background:#f6f6f6;
+}
+#form_bg, #loging_banner, #signup_butten {
+	margin-left:10px;
+	}	
+#form_outer, #form_cell_outer {
+	margin-left:5px;
+	margin-top:6px;
+	}
+
+.text_fieldBlock_left {
+	margin-left:5px;
+	padding:10px 5px 0px 5px;
+	}
+.submit_butten {
+	margin-left:7px;
+	}
+.option_form_sub_selections {
+	margin-left:25px;
+	}
+#banner_add_cads, #text_area_add_cads, #list_add_cads {
+	margin-left:8px;
+	}
+.select_wishlist_button_left img {
+vertical-align:top;
+	}
+.nav-menu ul {
+	font-size:0px;
+	line-height:17px;
+	}
+.wishlist_category_selection_div {
+	width:177px;
+	} 
+#sortby_div{
+	padding-right:15px;
+	padding-bottom:0px;
+	}
+div.msgBox {
+	text-align:left;
+	vertical-align:super;
+	padding-bottom:3px;
+	}
+.supplier_area_summery_main {
+	margin-right:15px;
+	}	
+
+.double_arrow {
+	margin-left:5px;
+	}
+.tag_heading_big {
+	padding-left:0px;
+	width:160px;
+	}
+.configure_quot_tabs_ginfo, .configure_quot_tabs_items {
+	font-size:0px;
+	}
+#space {
+	height:5px;
+	font-size:0px;
+	}
+.supplier_area_yellowbg_bottom {
+	float:none;
+	}
+.fieldBlock_right_add_cadds {
+	margin-bottom:2px;
+	margin-left:0px;
+	vertical-align:top;
+	}
+.fieldBlock_right_add_cadds_btn {
+	float:none;
+	margin-top:3px;
+	padding:5px;
+	display:inline;
+	}
+.add_cladds_txtfield {
+	border:1px solid #CCCCCC;
+	}	
+	
+form #classified_ads_list table {
+	width:620px;
+	background-color:#993333;
+	}
+
+#pgBarImgNext{
+	padding-right:14px;
+	 float:none;
+	 }
+	
+.double_arrow {
+	z-index:-1px;
+	margin-left:5px;
+	}
+	
+#footer {
+	margin-right:-3px;
+	margin-top:5px;
+	width:700px;
+	}

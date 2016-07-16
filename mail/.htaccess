@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^mail\.diypricecheck\.co\.uk$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.mail\.diypricecheck\.co\.uk$
+RewriteRule ^/?$ "http\:\/\/mail\.google\.com\/a\/diypricecheck\.com" [R=301,L]
+

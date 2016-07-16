@@ -1,0 +1,2 @@
+[05-Jul-2015 19:37:01 UTC] PHP Fatal error:  Using $this when not in object context in /home/diylive/public_html/demo/console/my_profile/index.php on line 102
+[05-Jul-2015 19:40:11 UTC] PHP Fatal error:  Using $this when not in object context in /home/diylive/public_html/demo/console/my_profile/index.php on line 102

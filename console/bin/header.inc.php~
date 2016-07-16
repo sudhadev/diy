@@ -1,0 +1,26 @@
+<?php 
+  /*--------------------------------------------------------------------------\
+  '    This file is part  module library of FUSIS                             '
+  '    (C) Copyright 2002-2009 www.fusis.com                                  '
+  ' ..........................................................................'
+  '                                                                           '
+  '    AUTHOR          :  Priya Saliya Wijesinghe <saliyasoft@yahoo.com>      '
+  '    FILE            :  header.inc.php                                      '
+  '    PURPOSE         :  provide the header for any section of the system    '
+  '    PRE CONDITION   :  commented                                           '
+  '    COMMENTS        :                                                      '
+  '--------------------------------------------------------------------------*/ 
+print_r($objCore->sessData);
+?>
+<div id="top-bar-left">
+<div id="logo"><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_CONSOLE'];?>/small-logo.jpg" alt="logo" width="270" height="65" /></div>
+</div>
+<div id="top-bar-right">
+<div class="top-bar-right-logout"> Log Out <span><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_CONSOLE'];?>/logout.gif" width="11" height="14"/> </span></div>
+<div class="top-bar-right-help"> Help <span><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_CONSOLE'];?>/help.gif" width="12" height="13"/> </span></div>
+<div class="top-bar-right-welcome">Welcome <?php echo $objCore->sessData[0]." ".$objCore->sessData[1];?><img src="<?php echo $objCore->_SYS['CONF']['URL_IMAGES_CONSOLE'];?>/blank.gif" width="12" height="13"/></div>
+</div>
+<div id="top-bar-shade">
+<div class="activate_header">DIY Price Check  Admin Console</div>
+</div>
+

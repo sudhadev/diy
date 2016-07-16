@@ -1,0 +1,70 @@
+#calendar
+{
+        border          : 1px solid black;
+        position        : absolute;
+        visibility      : hidden;
+        z-index         : 1;
+        background      : white;
+        padding         : 2px;
+	color		: silver;
+}
+
+
+#cal_left, #cal_title ,#cal_right
+{
+	background	: #FFDA00;
+	border		: 1px solid #FFDA00;
+	color		: white;
+	font-weight	: bold;
+	text-align	: center;
+}
+
+#calendar td
+{
+
+	color		: gray;
+	text-align  :center;
+    font-family : "Arial,Helvetica,sans-serif";
+    font-size   :11px;
+}
+
+#cal_title
+{
+	width		: 100px;
+    font-family : "Arial,Helvetica,sans-serif";
+    font-size   :11px;
+    font-weight :bold;
+    color       :white !important
+}
+#cal_tail
+{
+        text-align      : center;
+        width           : 140px;
+        border-top      : 1px solid black;
+}
+#calendar th
+{
+    background      : #FFDA00;
+	border		: 1px solid #FFDA00;
+	color		: white;
+	font-weight	: bold;
+	text-align:center;
+    font-family : "Arial,Helvetica,sans-serif";
+    font-size   :11px;
+}
+
+
+#calendar a
+{
+	color		: black;
+	text-decoration	: none;
+	
+}
+#calendar a:hover
+{
+	text-decoration	: underline;
+}
+#cal_left a, #cal_right a
+{
+	color		: white
+}
